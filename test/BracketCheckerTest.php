@@ -27,17 +27,12 @@ class BracketCheckerTest extends TestCase
         ];
     }
 
-    /**
-     * @dataProvider validCases
-     */
     public function testValidCases(string $input): void
     {
         $this->assertTrue(BracketChecker::validate($input));
     }
 
-    /**
-     * @dataProvider invalidCases
-     */
+
     public function testInvalidCases(string $input): void
     {
         $this->assertFalse(BracketChecker::validate($input));
